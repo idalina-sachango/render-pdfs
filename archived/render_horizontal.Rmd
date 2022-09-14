@@ -1,0 +1,153 @@
+---
+output: pdf_document
+geometry: margin=0.5in
+fontsize: 11pt
+params:
+  title: ''
+title: "`r params$title`"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width=12, fig.height=8, fig.asp = 0.8)
+library(patchwork)
+```
+
+## Regular Plot
+This is a test document showcasing the potential to render pdf's within a loop. This document will make use of the patchwork package to input interesting layouts. 
+\vspace{10 mm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+p
+```
+
+## Function: horizontal_three_layout(plot1, plot2, plot3, plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'mono', ...)
+
+## Caption Size 9, Character Length must be 27 characters long for caption, title, and substitle
+\vspace{10 mm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+horizontal_three_layout(p_hor_three, p_hor_three, p_hor_three,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+## Function: horizontal_two_layout(plot1, plot2, plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'mono', ...)
+
+## Caption size 9, character Length must be 41 characters long for caption, title, subtitle
+\vspace{10 mm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.width=10}
+horizontal_two_layout(p_hor_two, p_hor_two,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+## Function: vertical_two_layout(plot1, plot2, plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'mono', ...)
+\vspace{10 mm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+vertical_two_layout(p_vert, p_vert,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+## Function: horizontal_two_inset(plot1, plot2, position = 'top right', plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'sans', ...)
+
+## Size for caption, title, subtitle must be set at 7
+\vspace{10 mm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+horizontal_two_inset(p_hor_two, p_blank,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+
+## Function: horizontal_two_inset(plot1, plot2, position = 'top left', plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'sans', ...)
+
+## Size for caption, title, subtitle must be set at 7
+\vspace{10 mm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+horizontal_two_inset(p_hor_two, p_blank, position = 'top left',
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+
+
+## Function: horizontal_two_inset(plot1, plot2, position = 'bottom left', plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'sans', ...)
+
+## Size for caption, title, subtitle must be set at 7
+\vspace{10 mm}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+horizontal_two_inset(p_hor_two, p_blank, position = 'bottom left',
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+
+
+## Function: horizontal_two_inset(plot1, plot2, position = 'bottom right', plot_title = '', subtitle = '', caption = '', title_size = 18, title_font = 'sans', ...)
+## Size for caption, title, subtitle must be set at 7
+\vspace{10 mm}
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+horizontal_two_inset(p_hor_two, p_blank, position = 'bottom right',
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+horizontal_four_by_four(p_hor_small, p_hor_small, p_hor_small, p_hor_small,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+left_three_right_one(p_hor_small, p_hor_small, p_hor_small, p_hor_small,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+top_three_bottom_one(p_hor_small, p_hor_small, p_hor_small, p_hor_small,
+                        plot_title = "titletitletitletitletitle",
+                        subtitle = "titletitletitletitletitle",
+                        caption = "titletitletitletitletitle")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+---
+output: pdf_document
+geometry: margin=0.5in
+fontsize: 11pt
+classoption: landscape
+params:
+  title: ''
+  plot_funct: ''
+title: "`r params$title`"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.align = 'center',  fig.asp = 0.8, out.width = '100%', out.height = '100%')
+# knitr::opts_chunk$set(echo = TRUE, 
+#                       fig.align = 'center', fig.width=10, fig.height=15, fig.asp = 0.8)
+
+# knitr::opts_chunk$set(echo = TRUE,
+#                       fig.align = 'center', fig.asp = 0.8)
+
+library(patchwork)
+```
+
+```{r cars, echo=FALSE,message=FALSE}
+params$plot_funct
+```
+
